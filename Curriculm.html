@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>UFE Digital Marketing - Curriculum</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:#0a2a6e;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:60px;
+}
+
+.logo-section h2{
+    color:white;
+    margin:0;
+}
+
+.back-btn{
+    background:white;
+    color:#0a2a6e;
+    padding:12px 24px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+    background:
+    linear-gradient(rgba(10,42,110,0.7), rgba(10,42,110,0.7)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop");
+
+    background-size:cover;
+    background-position:center;
+
+    padding:100px 20px;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    font-size:20px;
+    line-height:1.7;
+}
+
+/* YEAR TABS */
+
+.years-tabs{
+    display:flex;
+    justify-content:center;
+    gap:120px;
+
+    background:white;
+    padding:25px 20px 10px;
+
+    border-bottom:1px solid #ddd;
+}
+
+.tab-btn{
+    background:none;
+    border:none;
+
+    font-size:32px;
+    font-weight:bold;
+
+    color:gray;
+    cursor:pointer;
+
+    padding-bottom:15px;
+    transition:0.3s;
+}
+
+.active-tab{
+    color:#0a2a6e;
+    border-bottom:4px solid #0a2a6e;
+}
+
+/* SEMESTER TABS */
+
+.semester-tabs{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+
+    background:white;
+    padding:20px;
+}
+
+.semester-btn{
+    background:none;
+    border:none;
+
+    font-size:20px;
+    font-weight:bold;
+
+    color:gray;
+    cursor:pointer;
+
+    padding-bottom:10px;
+    transition:0.3s;
+}
+
+.active-semester{
+    color:#0a2a6e;
+    border-bottom:3px solid #0a2a6e;
+}
+
+/* COURSES */
+
+.courses-section{
+    max-width:1000px;
+    margin:60px auto;
+    padding:0 20px;
+}
+
+.semester-title{
+    color:#0a2a6e;
+    letter-spacing:4px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.courses-section h2{
+    font-size:48px;
+    margin-bottom:40px;
+}
+
+.course-card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:25px;
+
+    display:flex;
+    align-items:flex-start;
+    gap:25px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.course-number{
+    background:#eef2ff;
+    color:#0a2a6e;
+
+    padding:12px 16px;
+    border-radius:10px;
+
+    font-weight:bold;
+    min-width:40px;
+    text-align:center;
+}
+
+.course-info h3{
+    margin:0 0 10px 0;
+    font-size:28px;
+}
+
+.course-info p{
+    margin:0;
+    color:#666;
+    font-size:18px;
+}
+
+/* SHOW / HIDE */
+
+.semester-content{
+    display:none;
+}
+
+.semester-content.active-content{
+    display:block;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0a2a6e;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:80px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .years-tabs{
+        gap:30px;
+    }
+
+    .tab-btn{
+        font-size:22px;
+    }
+
+    .semester-btn{
+        font-size:16px;
+    }
+
+    .courses-section h2{
+        font-size:34px;
+    }
+
+    .course-info h3{
+        font-size:22px;
+    }
+
+    .navbar{
+        padding:20px;
+    }
+
+}
+/* COURSE CARD HOVER EFFECT */
+
+.course-card{
+    transition:0.3s ease;
+    cursor:pointer;
+}
+
+.course-card:hover{
+    background:#eef4ff;
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(10,42,110,0.12);
+
+    border:1px solid #c7d8ff;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo-section">
+
+        <img src="logo.jpeg" class="logo">
+
+        <h2>UFE Digital Marketing</h2>
+
+    </div>
+
+    <a href="index.html" class="back-btn">
+        ← Back to Home
+    </a>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>Educational Sequence</h1>
+
+    <p>
+        Explore the complete Digital Marketing curriculum
+        at UFE across all academic years and semesters.
+    </p>
+
+</section>
+
+<!-- YEAR TABS -->
+
+<section class="years-tabs">
+
+    <button class="tab-btn active-tab"
+            onclick="changeYear(1)">
+        Year 1
+    </button>
+
+    <button class="tab-btn"
+            onclick="changeYear(2)">
+        Year 2
+    </button>
+
+    <button class="tab-btn"
+            onclick="changeYear(3)">
+        Year 3
+    </button>
+
+</section>
+
+<!-- SEMESTER TABS -->
+
+<section class="semester-tabs">
+
+    <button class="semester-btn active-semester"
+            onclick="showSemester(currentYear + 's1')">
+        Semester 1
+    </button>
+
+    <button class="semester-btn"
+            onclick="showSemester(currentYear + 's2')">
+        Semester 2
+    </button>
+
+</section>
+
+<!-- YEAR 1 • SEMESTER 1 -->
+
+<section class="courses-section semester-content active-content"
+         id="1s1">
+
+    <div class="semester-title">
+        YEAR 1 • SEMESTER 1
+    </div>
+
+    <h2>Semester 1 Courses</h2>
+
+    <div class="course-card">
+        <div class="course-number">01</div>
+        <div class="course-info">
+            <h3>Language 1</h3>
+            <p>Develops basic communication skills.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">02</div>
+        <div class="course-info">
+            <h3>Language 2</h3>
+            <p>Enhances second language skills.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">03</div>
+        <div class="course-info">
+            <h3>Ergonomics and Accessibility</h3>
+            <p>Focuses on user-friendly design.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">04</div>
+        <div class="course-info">
+            <h3>Digital Culture</h3>
+            <p>Introduces digital environments.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">05</div>
+        <div class="course-info">
+            <h3>Communication and Marketing Strategies</h3>
+            <p>Covers marketing basics.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">06</div>
+        <div class="course-info">
+            <h3>Expression, Communication and Rhetoric</h3>
+            <p>Improves communication skills.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">07</div>
+        <div class="course-info">
+            <h3>Multimedia Writing and Storytelling</h3>
+            <p>Teaches content creation.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">08</div>
+        <div class="course-info">
+            <h3>Graphic Production</h3>
+            <p>Basics of design.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">09</div>
+        <div class="course-info">
+            <h3>Artistic Culture</h3>
+            <p>Introduces art and visuals.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">10</div>
+        <div class="course-info">
+            <h3>Audio and Video Production</h3>
+            <p>Basics of media creation.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">11</div>
+        <div class="course-info">
+            <h3>Integration</h3>
+            <p>Combines digital tools.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">12</div>
+        <div class="course-info">
+            <h3>Web Development</h3>
+            <p>Builds simple websites.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">13</div>
+        <div class="course-info">
+            <h3>Hosting</h3>
+            <p>Basics of websites online.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">14</div>
+        <div class="course-info">
+            <h3>Information Representation and Processing</h3>
+            <p>Organizes and presents data clearly.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">15</div>
+        <div class="course-info">
+            <h3>Project Management</h3>
+            <p>Planning and organizing projects.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">16</div>
+        <div class="course-info">
+            <h3>Economics, Management and Digital Law</h3>
+            <p>Covers business and legal basics.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">17</div>
+        <div class="course-info">
+            <h3>Personal and Professional Project</h3>
+            <p>Focuses on future planning.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">18</div>
+        <div class="course-info">
+            <h3>LASs, Group Projects and Portfolio</h3>
+            <p>Encourages teamwork and practical work.</p>
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- YEAR 1 • SEMESTER 2 -->
+
+<section class="courses-section semester-content"
+         id="1s2">
+
+    <div class="semester-title">
+        YEAR 1 • SEMESTER 2
+    </div>
+
+    <h2>Semester 2 Courses</h2>
+
+    <div class="course-card">
+        <div class="course-number">01</div>
+        <div class="course-info">
+            <h3>Language 1</h3>
+            <p>Improves communication skills further.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">02</div>
+        <div class="course-info">
+            <h3>Language 2</h3>
+            <p>Develops language proficiency.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">03</div>
+        <div class="course-info">
+            <h3>Ergonomics and Accessibility</h3>
+            <p>Enhances user experience design.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">04</div>
+        <div class="course-info">
+            <h3>Digital Culture</h3>
+            <p>Explores digital trends in depth.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">05</div>
+        <div class="course-info">
+            <h3>Communication and Marketing Strategies</h3>
+            <p>Applies marketing concepts.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">06</div>
+        <div class="course-info">
+            <h3>Expression, Communication and Rhetoric</h3>
+            <p>Strengthens communication skills.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">07</div>
+        <div class="course-info">
+            <h3>Multimedia Writing and Storytelling</h3>
+            <p>Develops storytelling techniques.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">08</div>
+        <div class="course-info">
+            <h3>Graphic Production</h3>
+            <p>Enhances design skills.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">09</div>
+        <div class="course-info">
+            <h3>Artistic Culture</h3>
+            <p>Expands visual understanding.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">10</div>
+        <div class="course-info">
+            <h3>Audio and Video Production</h3>
+            <p>Improves media production skills.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">11</div>
+        <div class="course-info">
+            <h3>Content Management</h3>
+            <p>Focuses on managing digital content.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">12</div>
+        <div class="course-info">
+            <h3>Integration</h3>
+            <p>Applies digital integration skills.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">13</div>
+        <div class="course-info">
+            <h3>Web Development</h3>
+            <p>Builds more advanced websites.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">14</div>
+        <div class="course-info">
+            <h3>Information Systems</h3>
+            <p>Introduces digital systems and data handling.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">15</div>
+        <div class="course-info">
+            <h3>Hosting</h3>
+            <p>Expands knowledge of hosting systems.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">16</div>
+        <div class="course-info">
+            <h3>Information Representation and Processing</h3>
+            <p>Improves data presentation skills.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">17</div>
+        <div class="course-info">
+            <h3>Project Management</h3>
+            <p>Manages projects effectively.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">18</div>
+        <div class="course-info">
+            <h3>Economics, Management and Digital Law</h3>
+            <p>Applies business concepts.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">19</div>
+        <div class="course-info">
+            <h3>Personal and Professional Project</h3>
+            <p>Develops career planning.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">20</div>
+        <div class="course-info">
+            <h3>LASs, Group Projects and Portfolio</h3>
+            <p>Encourages teamwork and portfolio building.</p>
+        </div>
+    </div>
+
+</section>
+<!-- YEAR 2 • SEMESTER 1 -->
+
+<section class="courses-section semester-content"
+         id="2s1">
+
+    <div class="semester-title">
+        YEAR 2 • SEMESTER 1
+    </div>
+
+    <h2>Semester 1 Courses</h2>
+
+    <div class="course-card">
+        <div class="course-number">01</div>
+        <div class="course-info">
+            <h3>Language 1 & 2</h3>
+            <p>Improve communication in different languages.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">02</div>
+        <div class="course-info">
+            <h3>Experience Design (UX)</h3>
+            <p>Design easy and user-friendly experiences.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">03</div>
+        <div class="course-info">
+            <h3>Digital Culture</h3>
+            <p>Understand technology and social media impact.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">04</div>
+        <div class="course-info">
+            <h3>Marketing & Communication</h3>
+            <p>Learn how to promote and connect with people.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">05</div>
+        <div class="course-info">
+            <h3>Referencing</h3>
+            <p>Use sources correctly in your work.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">06</div>
+        <div class="course-info">
+            <h3>Expression & Rhetoric</h3>
+            <p>Speak clearly and confidently.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">07</div>
+        <div class="course-info">
+            <h3>Storytelling & Multimedia</h3>
+            <p>Create engaging content (text, images, video).</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">08</div>
+        <div class="course-info">
+            <h3>UI Design</h3>
+            <p>Design simple and attractive interfaces.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">09</div>
+        <div class="course-info">
+            <h3>Art & Motion Design</h3>
+            <p>Work with visuals, videos, and animation.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">10</div>
+        <div class="course-info">
+            <h3>Front-end & Back-end</h3>
+            <p>Build and develop websites and systems.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">11</div>
+        <div class="course-info">
+            <h3>Deployment</h3>
+            <p>Launch and manage digital projects.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">12</div>
+        <div class="course-info">
+            <h3>Data Processing</h3>
+            <p>Organize and analyze information.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">13</div>
+        <div class="course-info">
+            <h3>Project Management</h3>
+            <p>Plan and manage tasks effectively.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">14</div>
+        <div class="course-info">
+            <h3>Economics & Law</h3>
+            <p>Learn basics of business and digital rules.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">15</div>
+        <div class="course-info">
+            <h3>Personal Project</h3>
+            <p>Develop your career path.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">16</div>
+        <div class="course-info">
+            <h3>Group Work & Portfolio</h3>
+            <p>Work in teams and build your portfolio.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- YEAR 2 SEM 2 -->
+
+<!-- YEAR 2 • SEMESTER 2 -->
+<!-- YEAR 2 • SEMESTER 2 -->
+
+<section class="courses-section semester-content"
+         id="2s2">
+
+    <!-- HERO -->
+
+    <div style="background:#0a2a6e; padding:70px 50px; text-align:center; border-radius:20px 20px 0 0;">
+
+        <p style="font-size:12px; letter-spacing:4px; text-transform:uppercase; color:rgba(255,255,255,0.5); font-weight:600;">
+            Year 2 · Semester 2
+        </p>
+
+        <h2 style="font-size:42px; font-weight:800; color:white; margin:20px 0;">
+            Study Digital Marketing at
+            <span style="color:#f0c040;">UFE</span>
+        </h2>
+
+        <p style="max-width:700px; margin:auto; color:rgba(255,255,255,0.75); font-size:16px; line-height:1.8;">
+            Where creativity meets strategy, and students gain real-world experience.
+        </p>
+
+    </div>
+
+    <!-- WHY CHOOSE -->
+
+    <div style="background:white; padding:70px 50px;">
+
+        <p style="font-size:12px; letter-spacing:3px; text-transform:uppercase; color:#0a2a6e; font-weight:700;">
+            Why Choose This Major?
+        </p>
+
+        <h3 style="font-size:38px; font-weight:800; color:#111; margin:20px 0 50px;">
+            Why Digital Marketing at
+            The French University in Egypt?
+        </h3>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:25px;">
+
+            <div style="background:#f4f6fb; padding:30px; border-radius:16px; border-top:4px solid #0a2a6e;">
+
+                <div style="font-size:40px;">🏢</div>
+
+                <h4 style="color:#0a2a6e; font-size:18px;">
+                    Real Internship Opportunities
+                </h4>
+
+                <p style="color:#666; line-height:1.8;">
+                    Work with real companies and build your portfolio before graduation.
+                </p>
+
+            </div>
+
+            <div style="background:#f4f6fb; padding:30px; border-radius:16px; border-top:4px solid #0a2a6e;">
+
+                <div style="font-size:40px;">🛠️</div>
+
+                <h4 style="color:#0a2a6e; font-size:18px;">
+                    Practical Skills
+                </h4>
+
+                <p style="color:#666; line-height:1.8;">
+                    Learn through real campaigns, branding, and digital projects.
+                </p>
+
+            </div>
+
+            <div style="background:#f4f6fb; padding:30px; border-radius:16px; border-top:4px solid #0a2a6e;">
+
+                <div style="font-size:40px;">🎯</div>
+
+                <h4 style="color:#0a2a6e; font-size:18px;">
+                    Career Center Support
+                </h4>
+
+                <p style="color:#666; line-height:1.8;">
+                    Receive internship opportunities and professional guidance.
+                </p>
+
+            </div>
+
+            <div style="background:#f4f6fb; padding:30px; border-radius:16px; border-top:4px solid #0a2a6e;">
+
+                <div style="font-size:40px;">⭐</div>
+
+                <h4 style="color:#0a2a6e; font-size:18px;">
+                    Student Success Stories
+                </h4>
+
+                <p style="color:#666; line-height:1.8;">
+                    Graduates work at leading companies in Egypt and abroad.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PROFESSOR SECTION -->
+
+    <div style="background:#0a2a6e; padding:70px 50px; display:flex; gap:50px; flex-wrap:wrap; align-items:center;">
+
+        <div style="flex:1; min-width:280px;">
+
+            <p style="font-size:12px; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.5);">
+                Professor Insight
+            </p>
+
+            <h3 style="font-size:36px; color:white; margin:20px 0;">
+                What Our Faculty Say
+            </h3>
+
+            <blockquote style="border-left:4px solid #f0c040; padding-left:20px; color:rgba(255,255,255,0.85); line-height:1.9; font-style:italic;">
+                “Digital marketing today is more than social media —
+                it’s creativity, strategy, and understanding people.”
+            </blockquote>
+
+            <h4 style="color:#f0c040; margin-top:25px;">
+                Dr. Professor Name
+            </h4>
+
+        </div>
+
+        <div style="flex:0 0 280px; height:280px; border-radius:18px; background:rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:center; color:white;">
+
+            📸 Add Professor Photo
+
+        </div>
+
+    </div>
+
+    <!-- STUDENT VIDEO -->
+
+    <div style="background:#f4f6fb; padding:70px 50px;">
+
+        <p style="font-size:12px; letter-spacing:3px; text-transform:uppercase; color:#0a2a6e;">
+            Student Spotlight
+        </p>
+
+        <h3 style="font-size:36px; color:#111;">
+            Meet Our Students
+        </h3>
+
+        <p style="color:#666; line-height:1.8;">
+            Hear directly from our students as they share their experiences.
+        </p>
+
+       <div style="margin-top:35px; border-radius:18px; overflow:hidden;">
+
+    <video controls
+           autoplay
+           muted
+           loop
+           style="
+           width:65%;
+           max-width:700px;
+           height:auto;
+           border-radius:18px;
+           display:block;
+           margin:auto;
+           ">
+
+        <source src="interview_internship.mp4"
+                type="video/mp4">
+
+    </video>
+
+</div>
+  </div>
+
+    <!-- DAY IN LIFE -->
+
+<div style="background:white; padding:70px 50px;">
+
+    <p style="font-size:12px; letter-spacing:3px; text-transform:uppercase; color:#0a2a6e;">
+        Internship Experience
+    </p>
+
+    <h3 style="font-size:36px; color:#111;">
+        A Day in the Life of a
+        Digital Marketing Student
+    </h3>
+
+    <div style="margin-top:35px; border-radius:18px; overflow:hidden;">
+
+        <video controls
+               autoplay
+               muted
+               loop
+               style="
+               width:65%;
+               max-width:700px;
+               height:auto;
+               border-radius:18px;
+               display:block;
+               margin:auto;
+               ">
+
+            <source src="dil.mp4"
+                    type="video/mp4">
+
+        </video>
+
+    </div>
+
+</div>
+
+    <!-- TESTIMONIALS -->
+
+    <div style="background:#0a2a6e; padding:70px 50px;">
+
+        <p style="font-size:12px; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.5);">
+            Student Reviews
+        </p>
+
+        <h3 style="font-size:36px; color:white; margin-bottom:50px;">
+            Straight from Our Students
+        </h3>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px;">
+
+            <div style="background:rgba(255,255,255,0.08); padding:28px; border-radius:16px;">
+
+                <div style="color:#f0c040;">★★★★★</div>
+
+                <p style="color:white; line-height:1.8;">
+                    From the moment I started this major, I realized how practical it is. Most of the work we do is hands-on, which makes the learning experience much more engaging. One thing I didn't expect at all was that we would study programming and learn how to code — that honestly came as a surprise, but turned out to be a very valuable part of the major.
+
+I found my internship opportunity through the university's job fair. We worked mainly on social media content — going out, shooting videos, and preparing them for publishing. It was a really enjoyable experience.
+
+What makes this major stand out is that it is not purely theoretical. You are not completely shocked when you enter the job market — you already have some level of experience. The university is improving every year and bringing more opportunities, and that is clearly getting better over time.                </p>
+
+                <h4 style="color:#f0c040;">
+                    Leena
+                </h4>
+
+            </div>
+
+            <div style="background:rgba(255,255,255,0.08); padding:28px; border-radius:16px;">
+
+                <div style="color:#f0c040;">★★★★★</div>
+
+                <p style="color:white; line-height:1.8;">
+                    My internship experience was genuinely eye-opening. I joined the marketing team and was involved in real campaigns from start to finish — not just observing, but actively contributing. It was fast-paced and sometimes overwhelming, but incredibly rewarding.
+
+One of the biggest differences I noticed is that in the workplace, you're expected to take initiative, ask the right questions, and deliver results without constant guidance. During my internship, I applied concepts like audience segmentation, the marketing funnel, and consumer behavior to real campaigns — seeing these ideas work in practice made everything we studied feel much more relevant.
+
+This experience helped me overcome self-doubt and build real confidence — not just from studying, but from actually delivering results. It showed me how dynamic, strategic, and data-driven Digital Marketing really is.
+                </p>
+
+                <h4 style="color:#f0c040;">
+                    Mazin
+                </h4>
+
+            </div>
+
+            <div style="background:rgba(255,255,255,0.08); padding:28px; border-radius:16px;">
+
+                <div style="color:#f0c040;">★★★★★</div>
+
+                <p style="color:white; line-height:1.8;">
+                   My internship experience felt like being thrown into the deep end — in the best way possible. From the very first week, I was involved in real meetings, contributing ideas, and working on tasks that actually mattered. It wasn't just theoretical learning, it was real responsibility.
+
+One of the biggest differences I noticed is that in the real world, 'done and effective' often matters more than 'perfect but late.' I applied concepts like buyer personas in real scenarios, helping build strategies based on actual customer data — that's when everything we studied started to feel truly relevant.
+
+Most importantly, it changed how I see Digital Marketing — it's not just about creating content, but about creating impact. Every decision is driven by strategy and results.
+                </p>
+
+                <h4 style="color:#f0c040;">
+                    Mohamed
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CAREER CENTER -->
+
+    <div style="background:white; padding:70px 50px;">
+
+        <p style="font-size:12px; letter-spacing:3px; text-transform:uppercase; color:#0a2a6e;">
+            Career Support
+        </p>
+
+        <h3 style="font-size:36px; color:#111;">
+            Supported by Our Career Center
+        </h3>
+
+        <p style="color:#666; line-height:1.9; max-width:800px;">
+            The Career Center helps students with internships,
+            CV preparation, interviews, and job opportunities.
+        </p>
+
+        <div style="margin-top:40px; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;">
+
+            <div style="height:180px; background:#f4f6fb; border-radius:16px; display:flex; align-items:center; justify-content:center;">
+                📸 Screenshot 1
+            </div>
+
+            <div style="height:180px; background:#f4f6fb; border-radius:16px; display:flex; align-items:center; justify-content:center;">
+                📸 Screenshot 2
+            </div>
+
+            <div style="height:180px; background:#f4f6fb; border-radius:16px; display:flex; align-items:center; justify-content:center;">
+                📸 Screenshot 3
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- INSIGHTS -->
+
+    <div style="background:#f4f6fb; padding:70px 50px;">
+
+        <p style="font-size:12px; letter-spacing:3px; text-transform:uppercase; color:#0a2a6e;">
+            Student Outcomes
+        </p>
+
+        <h3 style="font-size:36px; color:#111; margin-bottom:50px;">
+            What Students Gained Most
+        </h3>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;">
+
+            <div style="background:white; border-radius:16px; padding:35px; text-align:center;">
+                💪
+                <h4>Confidence</h4>
+            </div>
+
+            <div style="background:white; border-radius:16px; padding:35px; text-align:center;">
+                🌍
+                <h4>Real Experience</h4>
+            </div>
+
+            <div style="background:white; border-radius:16px; padding:35px; text-align:center;">
+                📱
+                <h4>Marketing Skills</h4>
+            </div>
+
+            <div style="background:white; border-radius:16px; padding:35px; text-align:center;">
+                🤝
+                <h4>Communication</h4>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CTA -->
+
+    <div style="background:linear-gradient(135deg,#0a2a6e,#1a4aaa); padding:80px 50px; text-align:center; border-radius:0 0 20px 20px;">
+
+        <h3 style="font-size:40px; color:white;">
+            Start Your Journey in
+            Digital Marketing
+        </h3>
+
+        <p style="max-width:700px; margin:25px auto; color:rgba(255,255,255,0.75); line-height:1.8;">
+            Join a major that prepares you for real opportunities and success.
+        </p>
+
+        <a href="quiz.html"
+           style="display:inline-block; padding:15px 40px; background:#f0c040; color:#0a2a6e; font-weight:800; text-decoration:none; border-radius:10px;">
+
+            Take the Challenge →
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- YEAR 3 SEM 1 -->
+
+<!-- YEAR 3 • SEMESTER 1 -->
+
+<section class="courses-section semester-content"
+         id="3s1">
+
+    <div class="semester-title">
+        YEAR 3 • SEMESTER 1
+    </div>
+
+    <h2>Semester 1 Courses</h2>
+
+    <div class="course-card">
+        <div class="course-number">01</div>
+        <div class="course-info">
+            <h3>Language 1</h3>
+            <p>Continue improving language skills.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">02</div>
+        <div class="course-info">
+            <h3>Management & Quality Assurance</h3>
+            <p>Learn how to manage projects and ensure quality.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">03</div>
+        <div class="course-info">
+            <h3>Entrepreneurship</h3>
+            <p>Understand how to start and manage a business.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">04</div>
+        <div class="course-info">
+            <h3>Personal & Professional Project</h3>
+            <p>Develop your career goals.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">05</div>
+        <div class="course-info">
+            <h3>Advanced Front-End Development</h3>
+            <p>Build more complex and interactive interfaces.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">06</div>
+        <div class="course-info">
+            <h3>Advanced Back-End Development</h3>
+            <p>Work on advanced systems and databases.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">07</div>
+        <div class="course-info">
+            <h3>Interactive Devices</h3>
+            <p>Learn how users interact with digital devices.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">08</div>
+        <div class="course-info">
+            <h3>Hosting & Cybersecurity</h3>
+            <p>Manage websites and protect them from risks.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">09</div>
+        <div class="course-info">
+            <h3>Group Work & Portfolio</h3>
+            <p>Team projects and portfolio improvement.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- YEAR 3 • SEMESTER 2 -->
+
+<section class="courses-section semester-content"
+         id="3s2">
+
+    <div class="semester-title">
+        YEAR 3 • SEMESTER 2
+    </div>
+
+    <h2>Semester 2 Courses</h2>
+
+    <div class="course-card">
+        <div class="course-number">01</div>
+        <div class="course-info">
+            <h3>Entrepreneurship</h3>
+            <p>Apply business ideas in real projects.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">02</div>
+        <div class="course-info">
+            <h3>Web Development & Interactive Devices</h3>
+            <p>Combine development with interactive systems.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">03</div>
+        <div class="course-info">
+            <h3>Internship</h3>
+            <p>Gain real work experience.</p>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="course-number">04</div>
+        <div class="course-info">
+            <h3>Portfolio</h3>
+            <p>Finalize and present your work.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    © UFE Digital Marketing Department
+
+</footer>
+
+<!-- SCRIPT -->
+
+<script>
+
+let currentYear = 1;
+
+function showSemester(id){
+
+    const sections =
+    document.querySelectorAll('.semester-content');
+
+    sections.forEach(section => {
+        section.classList.remove('active-content');
+    });
+
+    document.getElementById(id)
+    .classList.add('active-content');
+
+}
+
+function changeYear(year){
+
+    currentYear = year;
+
+    // Update year buttons
+    const yearBtns =
+    document.querySelectorAll('.tab-btn');
+
+    yearBtns.forEach(btn => {
+        btn.classList.remove('active-tab');
+    });
+
+    yearBtns[year - 1]
+    .classList.add('active-tab');
+
+    // Show semester 1 automatically
+    showSemester(year + 's1');
+
+}
+
+</script>
+
+</body>
+</html>

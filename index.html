@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UFE Digital Marketing</title>
+
+    <link rel="stylesheet" href="style.css">
+<style>
+
+#chat-toggle{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:65px;
+    height:65px;
+    background:#0a2a6e;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    cursor:pointer;
+    z-index:10000;
+    box-shadow:0 8px 25px rgba(0,0,0,0.25);
+}
+
+#chatbot{
+    position:fixed;
+    bottom:95px;
+    right:20px;
+    width:340px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 35px rgba(0,0,0,0.25);
+    z-index:9999;
+    font-family:Arial;
+    display:none;
+}
+
+#chat-header{
+    background:#0a2a6e;
+    color:white;
+    padding:18px;
+    font-weight:bold;
+    font-size:18px;
+}
+
+#chat-box{
+    height:320px;
+    overflow-y:auto;
+    padding:15px;
+    background:#f5f7fb;
+}
+
+.bot-message{
+    background:#e3ebff;
+    padding:12px;
+    border-radius:12px;
+    margin-bottom:12px;
+    line-height:1.6;
+}
+
+.user-message{
+    background:#0a2a6e;
+    color:white;
+    padding:12px;
+    border-radius:12px;
+    margin-bottom:12px;
+    text-align:right;
+    line-height:1.6;
+}
+
+#chat-input-area{
+    display:flex;
+    border-top:1px solid #ddd;
+}
+
+#userInput{
+    flex:1;
+    border:none;
+    padding:15px;
+    outline:none;
+    font-size:15px;
+}
+
+#chat-input-area button{
+    border:none;
+    background:#0a2a6e;
+    color:white;
+    padding:15px 20px;
+    cursor:pointer;
+    font-weight:bold;
+}
+/* CLEAN FOOTER */
+
+.ufe-footer{
+    background:#0a2a6e;
+    color:white;
+    text-align:center;
+    padding:25px 20px;
+}
+
+.ufe-footer-logo{
+    width:120px;
+    height:auto;
+    margin-bottom:12px;
+    background:none;
+}
+
+.ufe-footer p{
+    margin:6px 0;
+    color:#e6e6e6;
+    font-size:15px;
+}
+
+.copyright{
+    margin-top:20px;
+    font-size:13px;
+    color:#cfcfcf;
+}
+
+.instagram-btn{
+    display:inline-block;
+    margin-top:12px;
+    padding:10px 22px;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+    transition:0.3s;
+}
+
+.instagram-btn:hover{
+    transform:translateY(-2px);
+}
+.location-link{
+    display:block;
+    color:#e6e6e6;
+    text-decoration:none;
+    margin:10px 0;
+    transition:0.3s;
+}
+
+.location-link:hover{
+    color:white;
+}
+.ufe-footer-logo{
+    width:220px;
+    height:auto;
+    margin-bottom:20px;
+    background:none;
+}
+    .language-switcher{
+    position:fixed;
+    top:100px;
+    right:20px;
+    display:flex;
+    gap:10px;
+    z-index:99999;
+}
+
+.language-switcher button{
+    border:none;
+    background:#0a2a6e;
+    color:white;
+    padding:10px 16px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.language-switcher button:hover{
+    transform:translateY(-2px);
+    background:#133b94;
+}
+
+.goog-te-banner-frame{
+    display:none !important;
+}
+
+body{
+    top:0 !important;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- LANGUAGE SWITCHER -->
+
+<div class="language-switcher">
+
+    <button onclick="translatePage('en')">
+        🇺🇸 EN
+    </button>
+
+    <button onclick="translatePage('ar')">
+        🇪🇬 AR
+    </button>
+
+    <button onclick="translatePage('fr')">
+        🇫🇷 FR
+    </button>
+
+</div>
+
+
+
+<div id="google_translate_element" style="display:none;"></div>
+
+<script>
+
+function googleTranslateElementInit() {
+
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'en',
+      includedLanguages: 'ar,fr,en'
+    },
+    'google_translate_element'
+  );
+}
+
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo-section">
+
+            <img src="logo.jpeg" class="logo">
+
+            <h2>UFE Digital Marketing</h2>
+
+        </div>
+
+        <nav class="navbar">
+
+    <div class="logo-section">
+
+        <img src="logo.jpeg" class="logo">
+
+        <h2>UFE Digital Marketing</h2>
+
+    </div>
+
+    <!-- NAV LINKS -->
+
+    <ul class="nav-links">
+
+        <!-- HOME -->
+
+        <li class="dropdown">
+
+            <a href="#">
+
+                Home ▼
+
+            </a>
+
+            <ul class="dropdown-menu">
+
+                <li><a href="#hero">Hero</a></li>
+
+                <li><a href="#about">About</a></li>
+
+            </ul>
+
+        </li>
+
+
+
+        <!-- EDUCATIONAL -->
+
+        <li class="dropdown">
+
+    <a href="#education">
+        Educational Sequence ▼
+    </a>
+
+    <ul class="dropdown-menu">
+
+        <li><a href="Curriculm.html">Year 1</a></li>
+
+        <li><a href="Curriculm.html">Year 2</a></li>
+
+        <li><a href="Curriculm.html">Year 3</a></li>
+
+    </ul>
+
+</li>
+
+
+
+        <!-- ABOUT -->
+
+        <li class="dropdown">
+
+            <a href="#about">
+
+                About ▼
+
+            </a>
+
+            <ul class="dropdown-menu">
+
+                <li><a href="#mission">Vision & Mission</a></li>
+
+                <li><a href="#experience">Student Experience</a></li>
+
+            </ul>
+
+        </li>
+
+
+
+        <!-- APPLY -->
+
+        <li>
+
+            <a href="game.html">
+
+                Apply Now
+
+            </a>
+
+        </li>
+
+
+
+        <!-- FAQ -->
+
+        <li>
+
+            <a href="#faq">
+
+                FAQ
+
+            </a>
+
+        </li>
+
+
+
+        <!-- CONTACT -->
+
+        <li class="dropdown">
+
+            <a href="#contact">
+
+                Contact Us ▼
+
+            </a>
+
+            <ul class="dropdown-menu">
+
+                <li><a href="#contact">Address</a></li>
+
+                <li><a href="#contact">Phone</a></li>
+
+                <li><a href="#contact">Email</a></li>
+
+            </ul>
+
+        </li>
+
+    </ul>
+
+</nav>
+
+    </nav>
+
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <video autoplay muted loop playsinline class="hero-video">
+
+            <source src="pv.mp4" type="video/mp4">
+
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p>UNIVERSITÉ FRANÇAISE D'ÉGYPTE</p>
+
+            <h1>From Scroll to Strategy.</h1>
+
+            <p class="hero-text">
+
+                You scroll every day.
+                But do you know what's behind it?
+
+            </p>
+
+            <a href="#about" class="hero-btn">
+
+                Explore The Department
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- QUICK LINKS -->
+
+    <section class="quick-links" id="education">
+
+        <img src="uc.jpg.jpg"    class="quick-bg">
+
+        <div class="quick-overlay"></div>
+
+        <div class="quick-grid">
+
+
+
+            <div class="quick-card">
+
+                <h2>Internship</h2>
+
+                <a href="intern.html">
+
+                    Explore →
+
+                </a>
+
+            </div>
+
+
+
+            <div class="quick-card">
+
+                <h2>Educational Sequence</h2>
+
+                <a href="Curriculm.html">
+
+                    Explore the program →
+
+                </a>
+
+            </div>
+
+
+
+            <div class="quick-card">
+
+                <h2>Apply Now</h2>
+
+                <a href="game.html">
+
+                    Start your journey →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ABOUT SECTION -->
+
+    <section class="about-section" id="about">
+
+        <div class="about-container">
+
+            <p class="section-small">
+
+                ABOUT THE DEPARTMENT
+
+            </p>
+
+            <h2>
+
+                Université Française d'Égypte (UFE)
+
+            </h2>
+
+            <p class="about-text">
+
+                The Digital Marketing department at UFE combines
+                creativity, strategy, communication, and technology
+                to prepare students for the future of digital business.
+
+                Students gain hands-on experience through campaigns,
+                branding projects, content creation, and modern
+                marketing tools used in today's industry.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- MISSION SECTION -->
+
+    <section class="mission-section">
+
+        <div class="mission-container">
+
+            <p class="mission-small">
+
+                OUR MISSION
+
+            </p>
+
+            <h2>
+
+                From Zero to Digital Expert.
+
+            </h2>
+
+            <p class="mission-main-text">
+
+                Learn digital marketing from scratch
+                through real projects, campaigns,
+                and practical experience.
+
+            </p>
+
+
+
+            <div class="mission-cards">
+
+
+
+                <div class="mission-card">
+
+                    <span>📚</span>
+
+                    <h3>Learn & Grow</h3>
+
+                    <p>
+
+                        Develop creativity,
+                        strategic thinking,
+                        and analytical skills.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="mission-card">
+
+                    <span>🚀</span>
+
+                    <h3>Real Experience</h3>
+
+                    <p>
+
+                        Work on campaigns and
+                        real-world marketing projects.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="mission-card">
+
+                    <span>🎓</span>
+
+                    <h3>Dual Degrees</h3>
+
+                    <p>
+
+                        Graduate with Egyptian
+                        and French university degrees.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="staff-btn-container">
+
+                <a href="doctors.html" class="staff-btn">
+
+                    Meet our Academic Staff
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contact-section" id="contact">
+
+    <div class="contact-container">
+
+        <p class="contact-small">
+            CONTACT
+        </p>
+
+        <h2>Still have questions?</h2>
+
+        <p class="contact-text">
+            Reach out to us and we’ll help you get started.
+        </p>
+
+       <a href="#contact-info" class="contact-btn">
+    Contact Us
+</a>
+
+    </div>
+
+</section>
+
+    <!-- FAQ SECTION -->
+
+   <!-- FAQ SECTION -->
+
+<section class="faq-section" id="faq">
+
+    <div class="faq-container">
+
+        <p class="faq-small">FAQ</p>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                What are the entry requirements for Digital Marketing at UFE?
+                <span>▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Students can apply using Thanaweya Amma,
+                    IGCSE, American Diploma, IB, or equivalent certificates.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                Is the degree internationally recognized?
+                <span>▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Yes, students graduate with Egyptian and French accredited degrees.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                How long is the Digital Marketing program?
+                <span>▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    The program is completed over 3 academic years.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                What jobs can I get after graduating?
+                <span>▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Graduates can work in social media marketing,
+                    branding, SEO, advertising, content creation,
+                    and digital strategy.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                Is the program taught in French or English?
+                <span>▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Most courses are taught in English,
+                    with French support in some subjects.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                Will I work on real projects during the program?
+                <span>▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Yes, students participate in campaigns,
+                    internships, and real marketing projects.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                How do I apply?
+                <span>▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    You can apply online through the UFE admission portal
+                    or contact the university directly.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT INFO SECTION -->
+
+<section class="contact-info-section" id="contact-info">
+
+    <div class="contact-info-container">
+
+        <h2>Contact Us</h2>
+
+        <p class="contact-subtitle">
+            We'd love to hear from you
+        </p>
+
+        <div class="contact-boxes">
+
+            <div class="contact-box">
+
+                <div class="contact-icon">📍</div>
+
+                <h3>Address</h3>
+
+                <p>
+                    The French University in Egypt - UFE
+                    <br>
+                    21 Egyptian Ismailia Road,
+                    <br>
+                    El Shorouk, Cairo
+                </p>
+
+            </div>
+
+            <div class="contact-box">
+
+                <div class="contact-icon">📞</div>
+
+                <h3>Phone</h3>
+
+                <p>17054</p>
+
+            </div>
+
+            <div class="contact-box">
+
+                <div class="contact-icon">✉️</div>
+
+                <h3>Email</h3>
+
+                <p>admission@ufe.edu.eg</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- FOOTER -->
+
+<footer class="ufe-footer">
+
+   <img src="ufe-white-logo.png"
+     class="ufe-footer-logo">
+
+<a href="https://maps.google.com/?q=French+University+in+Egypt"
+   target="_blank"
+   class="location-link">
+
+   21 Egyptian Ismailia Road, El Shorouk, Cairo Governorate
+
+</a>
+
+    <p>
+        17054
+    </p>
+
+    <p>
+        admission@ufe.edu.eg
+    </p>
+
+    <p class="copyright">
+        © UFE Digital Marketing Department
+    </p>
+
+    <a href="https://www.instagram.com/ufe_digitalmarketing__fans?igsh=cTRra2t6aXIxZWJu&utm_source=qr"
+       target="_blank"
+       class="instagram-btn">
+
+       Follow us on Instagram
+
+    </a>
+
+</footer>
+<!-- CHATBOT -->
+
+<div id="chat-toggle" onclick="toggleChat()">
+    💬
+</div>
+
+<div id="chatbot">
+
+    <div id="chat-header">
+        UFE Assistant
+    </div>
+
+    <div id="chat-box">
+
+        <div class="bot-message">
+            Hi 👋 Ask me anything about UFE Digital Marketing.
+        </div>
+
+    </div>
+
+    <div id="chat-input-area">
+
+        <input type="text"
+               id="userInput"
+               placeholder="Type a message...">
+
+        <button onclick="sendMessage()">
+            Send
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+function toggleChat(){
+
+    let chatbot = document.getElementById("chatbot");
+
+    if(chatbot.style.display === "none"){
+        chatbot.style.display = "block";
+    } else {
+        chatbot.style.display = "none";
+    }
+}
+
+function sendMessage(){
+
+    let input = document.getElementById("userInput");
+    let message = input.value;
+
+    if(message.trim() === "") return;
+
+    let chatBox = document.getElementById("chat-box");
+
+    chatBox.innerHTML += `
+        <div class="user-message">
+            ${message}
+        </div>
+    `;
+
+   let reply = "";
+
+if(message.toLowerCase().includes("how long") || message.toLowerCase().includes("years")){
+reply = "The Digital Marketing program at UFE lasts 3 academic years.";
+}
+
+else if(message.toLowerCase().includes("internship")){
+reply = "Yes! UFE students gain real internship experience during the program.";
+}
+
+else if(message.toLowerCase().includes("career") || message.toLowerCase().includes("jobs")){
+reply = "Graduates can work in social media marketing, branding, SEO, advertising, content creation, and digital strategy.";
+}
+
+else if(message.toLowerCase().includes("recognized") || message.toLowerCase().includes("degree")){
+reply = "Yes, students graduate with Egyptian and French accredited degrees.";
+}
+
+else if(message.toLowerCase().includes("year 1") || message.toLowerCase().includes("subjects")){
+reply = "Year 1 includes marketing, storytelling, web development, graphic production, communication, and multimedia courses.";
+}
+
+else if(message.toLowerCase().includes("american diploma") || message.toLowerCase().includes("igcse")){
+reply = "Yes! Students can apply using Thanaweya Amma, American Diploma, IGCSE, IB, or equivalent certificates.";
+}
+
+else if(message.toLowerCase().includes("skills")){
+reply = "Students learn digital marketing, branding, communication, content creation, design, web development, and teamwork skills.";
+}
+
+else if(message.toLowerCase().includes("web development") || message.toLowerCase().includes("design")){
+reply = "Yes! The program includes front-end development, back-end development, UX, UI, and digital design.";
+}
+
+else if(message.toLowerCase().includes("contact")){
+reply = "You can contact UFE admissions at 17054 or [admission@ufe.edu.eg](mailto:admission@ufe.edu.eg).";
+}
+
+else if(message.toLowerCase().includes("different") || message.toLowerCase().includes("ufe")){
+reply = "UFE combines creativity, strategy, communication, and technology with real-world projects and internships.";
+}
+
+else{
+reply = "Thanks for your message! Our UFE assistant will help you soon.";
+}
+
+
+    setTimeout(() => {
+
+        chatBox.innerHTML += `
+            <div class="bot-message">
+                ${reply}
+            </div>
+        `;
+
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+    }, 500);
+
+    input.value = "";
+}
+function translatePage(lang){
+
+    let googleFrame = document.querySelector(".goog-te-combo");
+
+    if(googleFrame){
+        googleFrame.value = lang;
+        googleFrame.dispatchEvent(new Event("change"));
+    }
+}
+</script>
+
+    </body>
+
+</html>
