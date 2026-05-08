@@ -992,3 +992,205 @@ footer p {
     }
 
 }
+
+
+
+
+
+/* ================= MOBILE OPTIMIZATION ================= */
+
+@media screen and (max-width:768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+        padding:15px 20px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .logo{
+        width:45px;
+        height:45px;
+    }
+
+    .logo-section h2{
+        font-size:18px;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        gap:15px;
+        width:100%;
+        text-align:center;
+    }
+
+    .dropdown-menu{
+        position:static;
+        opacity:1;
+        visibility:visible;
+        display:none;
+        margin-top:10px;
+        width:100%;
+    }
+
+    .dropdown:hover .dropdown-menu{
+        display:block;
+    }
+
+    /* HERO */
+
+    .hero{
+        height:85vh;
+    }
+
+    .hero-content{
+        width:92%;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+        line-height:1.1;
+    }
+
+    .hero-text{
+        font-size:16px;
+    }
+
+    .hero-btn{
+        padding:14px 28px;
+        font-size:16px;
+    }
+
+    /* QUICK LINKS */
+
+    .quick-links{
+        height:auto;
+    }
+
+    .quick-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quick-card{
+        padding:35px 25px;
+        min-height:220px;
+    }
+
+    .quick-card h2{
+        font-size:38px;
+    }
+
+    /* ABOUT */
+
+    .about-section h2,
+    .mission-section h2,
+    .faq-section h2,
+    .contact-section h2{
+        font-size:34px;
+    }
+
+    .about-text,
+    .mission-main-text,
+    .faq-answer p,
+    .contact-text{
+        font-size:16px;
+    }
+
+    /* MISSION CARDS */
+
+    .mission-cards{
+        grid-template-columns:1fr;
+    }
+
+    /* CONTACT BOXES */
+
+    .contact-box{
+        width:100%;
+    }
+
+    /* FAQ */
+
+    .faq-question{
+        font-size:18px;
+        text-align:left;
+        gap:15px;
+    }
+
+    /* FOOTER */
+
+    .ufe-footer{
+        padding:18px 15px;
+    }
+
+    .ufe-footer-logo{
+        width:140px;
+        margin-bottom:10px;
+    }
+
+    .ufe-footer p{
+        font-size:13px;
+        line-height:1.6;
+    }
+
+    .instagram-btn{
+        padding:8px 18px;
+        font-size:14px;
+    }
+
+    /* CHATBOT */
+
+    #chatbot{
+        width:92%;
+        right:4%;
+        bottom:85px;
+    }
+
+    #chat-toggle{
+        width:55px;
+        height:55px;
+        font-size:24px;
+    }
+
+    /* VIDEOS */
+
+    video{
+        width:100%;
+        height:auto;
+    }
+
+    /* CURRICULUM PAGE */
+
+    .years-tabs,
+    .semester-tabs{
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .tab-btn{
+        font-size:20px;
+    }
+
+    .semester-btn{
+        font-size:15px;
+    }
+
+    .course-card{
+        flex-direction:column;
+        gap:15px;
+        padding:22px;
+    }
+
+    .course-info h3{
+        font-size:22px;
+    }
+
+    .course-info p{
+        font-size:15px;
+    }
+
+}5
